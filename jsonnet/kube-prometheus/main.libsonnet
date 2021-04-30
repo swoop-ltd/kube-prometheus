@@ -30,7 +30,11 @@ local platformPatch = import './platforms/platforms.libsonnet';
         prometheus: error 'must provide version',
         prometheusAdapter: error 'must provide version',
         prometheusOperator: error 'must provide version',
+<<<<<<< HEAD
         kubeRbacProxy: error 'must provide version',
+=======
+        configmapReload: error 'must provide version'
+>>>>>>> be29648... can change configmapReload over $.values.common.images
       } + (import 'versions.json'),
       images: {
         alertmanager: 'quay.io/prometheus/alertmanager:v' + $.values.common.versions.alertmanager,
@@ -42,7 +46,11 @@ local platformPatch = import './platforms/platforms.libsonnet';
         prometheusAdapter: 'directxman12/k8s-prometheus-adapter:v' + $.values.common.versions.prometheusAdapter,
         prometheusOperator: 'quay.io/prometheus-operator/prometheus-operator:v' + $.values.common.versions.prometheusOperator,
         prometheusOperatorReloader: 'quay.io/prometheus-operator/prometheus-config-reloader:v' + $.values.common.versions.prometheusOperator,
+<<<<<<< HEAD
         kubeRbacProxy: 'quay.io/brancz/kube-rbac-proxy:v' + $.values.common.versions.kubeRbacProxy,
+=======
+        configmapReload: 'jimmidyson/configmap-reload:v' + $.values.common.versions.configmapReload,
+>>>>>>> be29648... can change configmapReload over $.values.common.images
       },
     },
     alertmanager: {
@@ -56,7 +64,11 @@ local platformPatch = import './platforms/platforms.libsonnet';
       namespace: $.values.common.namespace,
       version: $.values.common.versions.blackboxExporter,
       image: $.values.common.images.blackboxExporter,
+<<<<<<< HEAD
       kubeRbacProxyImage: $.values.common.images.kubeRbacProxy,
+=======
+      configmapReloaderImage: $.values.common.images.configmapReload,
+>>>>>>> be29648... can change configmapReload over $.values.common.images
     },
     grafana: {
       namespace: $.values.common.namespace,
