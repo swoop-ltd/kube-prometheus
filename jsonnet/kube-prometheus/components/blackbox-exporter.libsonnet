@@ -22,7 +22,7 @@ local defaults = {
   },
   configmapReloaderImage: 'jimmidyson/configmap-reload:v0.5.0',
   configmapReloaderImage: error 'must provide version',
-  kubeRbacProxyImage: error 'must provide kubeRbacProxyImage', 
+  kubeRbacProxyImage: error 'must provide kubeRbacProxyImage',
 
   port: 9115,
   internalPort: 19115,
